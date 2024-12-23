@@ -753,32 +753,44 @@ section {
 }
 
 .modal-text {
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  width: 360px;
   margin-bottom: 16px;
+  min-width: 360px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-close {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding: 0;
   top: 24px;
   right: 24px;
-  border-radius: 50px;
-  background-color: #e7e9fc;
-  border: 1px solid #0000001a;
   width: 24px;
   height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close .modal-close-icon {
